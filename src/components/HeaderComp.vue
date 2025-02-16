@@ -2,7 +2,7 @@
     <!-- HEADER -->
     <header class="header__box center">
       <div class="header__logo">
-        <a class="header__logo_link" href="index.html"
+        <router-link class="header__logo_link" to="/"
           ><svg
             width="34"
             height="34"
@@ -15,17 +15,20 @@
               fill="#CDA274"
             />
           </svg>
-          <span class="header__logo_text">Interno</span></a
+          <span class="header__logo_text">Interno</span></router-link
         >
       </div>
       <nav class="header__nav">
         <ul class="header__nav_list">
-          <li class="header__nav_item"><a href="index.html">Домой</a></li>
+          <li class="header__nav_item"><router-link to="/">Домой
+          </router-link></li>
           <li class="header__nav_item">
-            <a href="#">Проект</a>
+            <router-link to="ProjectsPage">Проект
+            </router-link>
           </li>
           <li class="header__nav_item">
-            <a href="#">Блог</a>
+            <router-link to="BlogPage">Блог
+            </router-link>
           </li>
         </ul>
       </nav>

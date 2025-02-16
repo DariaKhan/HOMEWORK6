@@ -24,8 +24,8 @@ a {
 }
 
 .center {
-  padding-left: calc(50% - 600px);
-  padding-right: calc(50% - 600px);
+  padding-left: calc(50% - 1200px / 2);
+  padding-right: calc(50% - 1200px / 2);
 }
 
 /* HEADER */
@@ -69,7 +69,7 @@ a {
 
 /* BANNER */
 .banner__box {
-  width: 1200px;
+  width: 100%;
   height: 758px;
   flex-shrink: 0;
   position: relative;
@@ -227,7 +227,8 @@ a {
 
 /* NUMBERS */
 .numbers {
-  width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   height: 460px;
   display: flex;
   align-items: center;
@@ -268,6 +269,10 @@ a {
 }
 
 /* NEWS AND ARTICLES */
+.news-box {
+  display: flex;
+  justify-content: center;
+}
 .news-box__box {
   margin-top: 96px;
   margin-bottom: 52px;
@@ -513,7 +518,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1200px;
+  width: 100%;
   height: 356px;
   background-image: url("@/assets/img/2-Banner-blog.png");
   background-size: cover;
@@ -524,7 +529,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1200px;
+  width: 100%;
   height: 356px;
   background-image: url("@/assets/img/4-bunner.png");
   background-size: cover;
@@ -600,8 +605,8 @@ a {
 .last-post__info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 469px;
+  gap: 10px;
+  width: 400px;
 }
 .last-post__info-heading {
   margin-bottom: 10px;
@@ -626,6 +631,8 @@ a {
 .pagination {
   margin-top: 50px;
   margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
 }
 .pagination__element-box {
   display: flex;
@@ -1008,7 +1015,7 @@ a {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid gray;
 }
 
 /* 404 */
@@ -1043,4 +1050,46 @@ a {
 }
 .banner404__img {
   border-radius: 0 0 0 60px;
+}
+
+.categories__box {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.categories__list {
+  width: 880px;
+  height: 75px;
+  border-radius: 18px;
+  border: 1px solid #cda274;
+  display: flex;
+  width: 880px;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+}
+.categories__item {
+  color: #292f36;
+  text-align: center;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 22.5px */
+  letter-spacing: 0.36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categories__item-active {
+  display: flex;
+  padding: 26px 66px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 18px;
+  background: #cda274;
+}
+
+.categories__list {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

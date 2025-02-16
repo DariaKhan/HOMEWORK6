@@ -3,7 +3,7 @@
   <div class="footer center">
     <div class="footer__social">
       <div class="footer__logo">
-        <a class="footer__logo_link" href="index.html"
+        <router-link class="footer__logo_link" to="/"
           ><svg
             width="34"
             height="34"
@@ -16,7 +16,7 @@
               fill="#CDA274"
             />
           </svg>
-          <span class="footer__logo_text">Interno</span></a
+          <span class="footer__logo_text">Interno</span></router-link
         >
       </div>
       <div class="footer__social-links">
@@ -54,12 +54,12 @@
     <nav class="footer__nav">
       <p class="footer__nav_heading">Страницы</p>
       <ul class="footer__nav_list">
-        <li class="footer__nav_item"><a href="index.html">Домой</a></li>
+        <li class="footer__nav_item"><router-link to="/">Домой</router-link></li>
         <li class="footer__nav_item">
-          <a href="#">Проект</a>
+          <router-link to="ProjectsPage">Проект</router-link>
         </li>
         <li class="footer__nav_item">
-          <a href="#">Блог</a>
+          <router-link to="BlogPage">Блог</router-link>
         </li>
       </ul>
     </nav>
