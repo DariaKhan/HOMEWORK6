@@ -5,11 +5,9 @@
 
     <!-- BLOG DETAILS -->
     <div class="project-details center">
-      <h3 class="project-details__heading">Минималистичные спальни</h3>
+      <h3 class="project-details__heading">{{projectDescription.title}}</h3>
       <p class="project-details__text">
-        В своей статье от 1994-го года журнал «Before & After» отследил фразу
-        «Lorem ipsum ...» до философского трактата Цицерона О пределах добра и зла,
-        написанного в 45 году до нашей эры на латинском языке.
+        {{projectDescription.text}}
       </p>
       <p class="project-details__text">
         В оригинале текст выглядит так «Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
@@ -22,10 +20,10 @@
       <div class="carousel__box">
         <BCarousel id="carousel-1" v-model="slide" controls indicators>
           <BCarouselSlide
-            v-for="(image, index) in images"
+            v-for="(image, index) in projectDescription.images"
             :key="index"
             :img-src="require(`@/assets/img/${image}`)"
-          />
+          />n
         </BCarousel>
         <svg
           class="carousel__svg"
@@ -96,12 +94,16 @@
 
 <script>
 import { BCarousel, BCarouselSlide } from 'bootstrap-vue-next'
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'ProjectDetailsContent',
   components: {
     BCarousel,
     BCarouselSlide
+  },
+  computed: {
+    ...mapGetters(['projectDescription'])
   },
   data () {
     return {
